@@ -1,0 +1,14 @@
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Entities\bin\Debug\net6.0\FCF.Entities.deps.json
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Entities\bin\Debug\net6.0\FCF.Entities.dll
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Entities\bin\Debug\net6.0\FCF.Entities.pdb
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Entities\obj\Debug\net6.0\FCF.Entities.csproj.AssemblyReference.cache
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Entities\obj\Debug\net6.0\FCF.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Entities\obj\Debug\net6.0\FCF.Entities.AssemblyInfoInputs.cache
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Entities\obj\Debug\net6.0\FCF.Entities.AssemblyInfo.cs
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Entities\obj\Debug\net6.0\FCF.Entities.csproj.CoreCompileInputs.cache
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Entities\obj\Debug\net6.0\FCF.Entities.dll
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Entities\obj\Debug\net6.0\refint\FCF.Entities.dll
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Entities\obj\Debug\net6.0\FCF.Entities.pdb
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Entities\obj\Debug\net6.0\ref\FCF.Entities.dll
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Entities\bin\Debug\net6.0\FCF.Entities.runtimeconfig.json
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Entities\obj\Debug\net6.0\FCF.Entities.genruntimeconfig.cache

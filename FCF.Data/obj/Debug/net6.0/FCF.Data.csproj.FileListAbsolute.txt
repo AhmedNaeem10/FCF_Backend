@@ -1,0 +1,17 @@
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Data\bin\Debug\net6.0\FCF.Data.deps.json
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Data\bin\Debug\net6.0\FCF.Data.dll
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Data\bin\Debug\net6.0\FCF.Data.pdb
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Data\bin\Debug\net6.0\FCF.Entities.dll
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Data\bin\Debug\net6.0\FCF.Entities.pdb
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Data\obj\Debug\net6.0\FCF.Data.csproj.AssemblyReference.cache
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Data\obj\Debug\net6.0\FCF.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Data\obj\Debug\net6.0\FCF.Data.AssemblyInfoInputs.cache
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Data\obj\Debug\net6.0\FCF.Data.AssemblyInfo.cs
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Data\obj\Debug\net6.0\FCF.Data.csproj.CoreCompileInputs.cache
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Data\obj\Debug\net6.0\FCF.Data.csproj.CopyComplete
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Data\obj\Debug\net6.0\FCF.Data.dll
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Data\obj\Debug\net6.0\refint\FCF.Data.dll
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Data\obj\Debug\net6.0\FCF.Data.pdb
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Data\obj\Debug\net6.0\ref\FCF.Data.dll
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Data\bin\Debug\net6.0\FCF.Data.runtimeconfig.json
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Data\obj\Debug\net6.0\FCF.Data.genruntimeconfig.cache

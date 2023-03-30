@@ -1,0 +1,17 @@
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Models\bin\Debug\net6.0\FCF.Models.deps.json
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Models\bin\Debug\net6.0\FCF.Models.dll
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Models\bin\Debug\net6.0\FCF.Models.pdb
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Models\bin\Debug\net6.0\FCF.Entities.dll
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Models\bin\Debug\net6.0\FCF.Entities.pdb
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Models\obj\Debug\net6.0\FCF.Models.csproj.AssemblyReference.cache
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Models\obj\Debug\net6.0\FCF.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Models\obj\Debug\net6.0\FCF.Models.AssemblyInfoInputs.cache
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Models\obj\Debug\net6.0\FCF.Models.AssemblyInfo.cs
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Models\obj\Debug\net6.0\FCF.Models.csproj.CoreCompileInputs.cache
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Models\obj\Debug\net6.0\FCF.Models.csproj.CopyComplete
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Models\obj\Debug\net6.0\FCF.Models.dll
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Models\obj\Debug\net6.0\refint\FCF.Models.dll
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Models\obj\Debug\net6.0\FCF.Models.pdb
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Models\obj\Debug\net6.0\ref\FCF.Models.dll
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Models\bin\Debug\net6.0\FCF.Models.runtimeconfig.json
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF.Models\obj\Debug\net6.0\FCF.Models.genruntimeconfig.cache

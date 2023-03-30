@@ -1,0 +1,14 @@
+C:\Users\ahmednaeem\source\repos\FCF_Backend\Config\bin\Debug\net6.0\FCF.Config.deps.json
+C:\Users\ahmednaeem\source\repos\FCF_Backend\Config\bin\Debug\net6.0\FCF.Config.dll
+C:\Users\ahmednaeem\source\repos\FCF_Backend\Config\bin\Debug\net6.0\FCF.Config.pdb
+C:\Users\ahmednaeem\source\repos\FCF_Backend\Config\obj\Debug\net6.0\FCF.Config.csproj.AssemblyReference.cache
+C:\Users\ahmednaeem\source\repos\FCF_Backend\Config\obj\Debug\net6.0\FCF.Config.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ahmednaeem\source\repos\FCF_Backend\Config\obj\Debug\net6.0\FCF.Config.AssemblyInfoInputs.cache
+C:\Users\ahmednaeem\source\repos\FCF_Backend\Config\obj\Debug\net6.0\FCF.Config.AssemblyInfo.cs
+C:\Users\ahmednaeem\source\repos\FCF_Backend\Config\obj\Debug\net6.0\FCF.Config.csproj.CoreCompileInputs.cache
+C:\Users\ahmednaeem\source\repos\FCF_Backend\Config\obj\Debug\net6.0\FCF.Config.dll
+C:\Users\ahmednaeem\source\repos\FCF_Backend\Config\obj\Debug\net6.0\refint\FCF.Config.dll
+C:\Users\ahmednaeem\source\repos\FCF_Backend\Config\obj\Debug\net6.0\FCF.Config.pdb
+C:\Users\ahmednaeem\source\repos\FCF_Backend\Config\obj\Debug\net6.0\ref\FCF.Config.dll
+C:\Users\ahmednaeem\source\repos\FCF_Backend\Config\bin\Debug\net6.0\FCF.Config.runtimeconfig.json
+C:\Users\ahmednaeem\source\repos\FCF_Backend\Config\obj\Debug\net6.0\FCF.Config.genruntimeconfig.cache
