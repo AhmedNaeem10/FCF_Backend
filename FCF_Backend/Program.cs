@@ -1,10 +1,14 @@
-
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 using FCF.Data;
-using FCF.Services;
 using FCF.Config;
 using FCF.Helpers;
+using FCF.Services.Interfaces;
+using FluentValidation;
+using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Hosting;
+using FCF.Models.Validators.ModelValidators;
+using FCF.Services.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +29,9 @@ builder.Services.AddTransient<MainDBContext>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<UserValidator>());
+
 
 var app = builder.Build();
 

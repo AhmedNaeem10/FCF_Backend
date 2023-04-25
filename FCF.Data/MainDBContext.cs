@@ -5,7 +5,7 @@ namespace FCF.Data
 {
     public class MainDBContext : DbContext
     {
-        public MainDBContext(DbContextOptions options) : base(options) { }
+        public MainDBContext(DbContextOptions<MainDBContext> options) : base(options) { }
 
         public DbSet<User> Users { get; set; }
         public DbSet<Team> Teams { get; set; }

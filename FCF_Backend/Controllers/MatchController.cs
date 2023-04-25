@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using FCF.Services;
-using FCF.Models;
+using FCF.Services.Interfaces;
+using FCF.Models.Requests.MatchDtos;
 
 namespace WebAPI.Controllers
 {

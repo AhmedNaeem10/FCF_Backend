@@ -1,7 +1,13 @@
+using FCF.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<MainDBContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MainDBContext") ?? throw new InvalidOperationException("Connection string 'MainDBContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddTransient<MainDBContext>();
 
 var app = builder.Build();
 

@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using FCF.Data;
 using FCF.Entities;
-using FCF.Helpers;
-using FCF.Models;
 using FCF.Services;
+using FCF.Services.Interfaces;
+using FCF.Models.Requests.TeamDtos;
 
 namespace WebAPI.Controllers
 {

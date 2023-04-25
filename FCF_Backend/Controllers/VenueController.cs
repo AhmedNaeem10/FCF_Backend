@@ -1,7 +1,7 @@
-﻿using FCF.Services;
-using FCF.Entities;
-using FCF.Models;
+﻿using FCF.Entities;
 using Microsoft.AspNetCore.Mvc;
+using FCF.Services.Interfaces;
+using FCF.Models.Requests.VenueDtos;
 
 namespace FCF.Api.Controllers
 {
