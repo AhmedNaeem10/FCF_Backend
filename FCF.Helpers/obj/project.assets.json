@@ -12477,6 +12477,7 @@
       "AutoMapper >= 10.1.1",
       "FCF.Config >= 1.0.0",
       "FCF.Entities >= 1.0.0",
+      "FCF.Models >= 1.0.0",
       "FCF.Services >= 1.0.0",
       "Microsoft.AspNetCore.Http >= 2.2.2",
       "Microsoft.AspNetCore.Mvc >= 2.2.0",
@@ -12519,6 +12520,9 @@
             },
             "C:\\Users\\ahmednaeem\\source\\repos\\FCF_Backend\\FCF.Entities\\FCF.Entities.csproj": {
               "projectPath": "C:\\Users\\ahmednaeem\\source\\repos\\FCF_Backend\\FCF.Entities\\FCF.Entities.csproj"
+            },
+            "C:\\Users\\ahmednaeem\\source\\repos\\FCF_Backend\\FCF.Models\\FCF.Models.csproj": {
+              "projectPath": "C:\\Users\\ahmednaeem\\source\\repos\\FCF_Backend\\FCF.Models\\FCF.Models.csproj"
             },
             "C:\\Users\\ahmednaeem\\source\\repos\\FCF_Backend\\FCF.Services\\FCF.Services.csproj": {
               "projectPath": "C:\\Users\\ahmednaeem\\source\\repos\\FCF_Backend\\FCF.Services\\FCF.Services.csproj"

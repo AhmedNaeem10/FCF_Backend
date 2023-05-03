@@ -279,6 +279,9 @@
               "C:\\Users\\ahmednaeem\\source\\repos\\FCF_Backend\\FCF.Entities\\FCF.Entities.csproj": {
                 "projectPath": "C:\\Users\\ahmednaeem\\source\\repos\\FCF_Backend\\FCF.Entities\\FCF.Entities.csproj"
               },
+              "C:\\Users\\ahmednaeem\\source\\repos\\FCF_Backend\\FCF.Models\\FCF.Models.csproj": {
+                "projectPath": "C:\\Users\\ahmednaeem\\source\\repos\\FCF_Backend\\FCF.Models\\FCF.Models.csproj"
+              },
               "C:\\Users\\ahmednaeem\\source\\repos\\FCF_Backend\\FCF.Services\\FCF.Services.csproj": {
                 "projectPath": "C:\\Users\\ahmednaeem\\source\\repos\\FCF_Backend\\FCF.Services\\FCF.Services.csproj"
               }
@@ -561,6 +564,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\Users\\ahmednaeem\\source\\repos\\FCF_Backend\\FCF.Data\\FCF.Data.csproj": {
+                "projectPath": "C:\\Users\\ahmednaeem\\source\\repos\\FCF_Backend\\FCF.Data\\FCF.Data.csproj"
+              },
               "C:\\Users\\ahmednaeem\\source\\repos\\FCF_Backend\\FCF.Models\\FCF.Models.csproj": {
                 "projectPath": "C:\\Users\\ahmednaeem\\source\\repos\\FCF_Backend\\FCF.Models\\FCF.Models.csproj"
               },
@@ -587,13 +593,13 @@
               "target": "Package",
               "version": "[3.0.2, )"
             },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.1.0, )"
-            },
-            "Xunit.DependencyInjection": {
-              "target": "Package",
-              "version": "[7.6.0, )"
             },
             "coverlet.collector": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -604,10 +610,6 @@
             "xunit": {
               "target": "Package",
               "version": "[2.4.1, )"
-            },
-            "xunit.extensibility.core": {
-              "target": "Package",
-              "version": "[2.4.2, )"
             },
             "xunit.runner.visualstudio": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

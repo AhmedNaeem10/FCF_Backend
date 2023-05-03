@@ -4,11 +4,9 @@ using FCF.Data;
 using FCF.Config;
 using FCF.Helpers;
 using FCF.Services.Interfaces;
-using FluentValidation;
 using FluentValidation.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
-using FCF.Models.Validators.ModelValidators;
 using FCF.Services.Services;
+using FCF.Models.Validators.ModelValidators.User;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,7 +30,6 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<UserValidator>());
 
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -47,6 +44,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.UseMiddleware<JwtMiddleware>();
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.MapControllers();
 

@@ -7,7 +7,7 @@ namespace FCF.Services.Interfaces
     {
         Task<UserInfo> AuthenticateAsync(LoginUserDto model);
         Task<User> GetByIdAsync(int id);
-
+        Task<List<User>> GetPaginatedUsersAsync(int pageNum = 0, int chunkSize = 10);
         Task<List<User>> GetAllUsersAsync();
         Task<User> RegisterUserAsync(UserDto addUser);
 

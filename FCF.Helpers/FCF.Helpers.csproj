@@ -23,6 +23,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Config\FCF.Config.csproj" />
     <ProjectReference Include="..\FCF.Entities\FCF.Entities.csproj" />
+    <ProjectReference Include="..\FCF.Models\FCF.Models.csproj" />
     <ProjectReference Include="..\FCF.Services\FCF.Services.csproj" />
   </ItemGroup>
 

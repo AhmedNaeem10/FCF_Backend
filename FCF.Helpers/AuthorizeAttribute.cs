@@ -1,9 +1,8 @@
-﻿namespace FCF.Helpers
+﻿using Microsoft.AspNetCore.Mvc.Filters;
+using FCF.Helpers.Dtos;
+
+namespace FCF.Helpers
 {
-    using Microsoft.AspNetCore.Mvc;
-    using Microsoft.AspNetCore.Mvc.Filters;
-    using FCF.Entities;
-    using Microsoft.AspNetCore.Http;
 
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
     public class AuthorizeAttribute : Attribute, IAuthorizationFilter
@@ -11,15 +10,10 @@
         public string Role { get; set; }
         public void OnAuthorization(AuthorizationFilterContext context)
         {
-            var user = (User)context.HttpContext.Items["User"];
-            Console.WriteLine(user.ToString());
-            if (user == null)
+            var user = (UserDto)context.HttpContext.Items["User"];
+            if (user == null || !Role.Split(",").Contains(user.role))
             {
-
-            }
-            if (user == null || !Role.Split(",").Contains(user.Role))
-            {
-                context.Result = new JsonResult(new { message = "Unauthorized" }) { StatusCode = StatusCodes.Status401Unauthorized };
+                throw new ApplicationException("Failed to authorize the api caller!");
             }
         }
     }

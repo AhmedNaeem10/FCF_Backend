@@ -17,6 +17,11 @@ namespace FCF.Services.Services
         {
             _appSettings = appSettings.Value;
         }
+
+        public JwtService(AppSettings appSettings) {
+            _appSettings = appSettings;
+        }
+
         public string GenerateJwtToken(User user)
         {
             // generate token that is valid for 7 days

@@ -1,11 +1,11 @@
-﻿using FCF.Services;
-using FCF.Config;
+﻿using FCF.Config;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using Microsoft.AspNetCore.Http;
 using FCF.Services.Interfaces;
+using FCF.Helpers.Dtos;
 
 namespace FCF.Helpers
 {
@@ -32,26 +32,29 @@ namespace FCF.Helpers
 
         private async void AttachUserToContext(HttpContext context, IUserService userService, string token)
         {
-            try
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
+            tokenHandler.ValidateToken(token, new TokenValidationParameters
             {
-                var tokenHandler = new JwtSecurityTokenHandler();
-                var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
-                tokenHandler.ValidateToken(token, new TokenValidationParameters
-                {
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(key),
-                    ValidateIssuer = false,
-                    ValidateAudience = false,
-                    ClockSkew = TimeSpan.Zero
-                }, out SecurityToken validatedToken);
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(key),
+                ValidateIssuer = false,
+                ValidateAudience = false,
+                ClockSkew = TimeSpan.Zero
+            }, out SecurityToken validatedToken);
 
-                var jwtToken = (JwtSecurityToken)validatedToken;
-                var userId = int.Parse(jwtToken.Claims.First(x => x.Type == "id").Value);
-                context.Items["User"] = await userService.GetByIdAsync(userId);
-            }
-            catch
+            var jwtToken = (JwtSecurityToken)validatedToken;
+            int id = int.Parse(jwtToken.Claims.First(x => x.Type == "id").Value);
+            string name = jwtToken.Claims.First(x => x.Type == "name").Value;
+            string role = jwtToken.Claims.First(x => x.Type == "role").Value;
+            UserDto user = new UserDto()
             {
-            }
+                id = id,
+                name = name,
+                role = role
+            };
+
+            context.Items["User"] = user;
         }
     }
 }
