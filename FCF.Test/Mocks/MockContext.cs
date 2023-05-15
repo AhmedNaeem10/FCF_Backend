@@ -6,13 +6,13 @@ namespace FCF.Test.Mocks
 {
     public class MockContext<TContext> : IDisposable where TContext : DbContext
     {
-        private SqliteMemoryDbManager<TContext> SqliteMemoryDbManager { get; }
+        private SqlServerDbManager<TContext> SqliteMemoryDbManager { get; }
 
         public TContext Context { get; }
 
         public MockContext(Func<DbContextOptions<TContext>, TContext> creator)
         {
-            SqliteMemoryDbManager = new SqliteMemoryDbManager<TContext>();
+            SqliteMemoryDbManager = new SqlServerDbManager<TContext>();
             Context = creator(SqliteMemoryDbManager.Options);
             Context.Database.EnsureCreated();
         }

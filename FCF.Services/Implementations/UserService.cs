@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using FCF.Services.Interfaces;
 using FCF.Models.Requests.UserDtos;
-using FCF.Models.Validators.Regexes;
+using FCF.Services.Implementations;
 
 namespace FCF.Services.Services
 {
@@ -13,12 +13,14 @@ namespace FCF.Services.Services
         private readonly MainDBContext dbContext;
         private readonly IJwtService _jwtService;
         private readonly IMapper _mapper;
+        private readonly IEmailService emailService;
 
-        public UserService(IMapper mapper, MainDBContext dbContext, IJwtService jwtService)
+        public UserService(IMapper mapper, MainDBContext dbContext, IJwtService jwtService, IEmailService emailService)
         {
             _mapper = mapper;
             this.dbContext = dbContext;
             _jwtService = jwtService;
+            this.emailService = emailService;
         }
 
         public async Task<User> GetByIdAsync(int id)
@@ -56,6 +58,7 @@ namespace FCF.Services.Services
             var _mappedUser = _mapper.Map<User>(addUser);
             await dbContext.Users.AddAsync(_mappedUser);
             await dbContext.SaveChangesAsync();
+            emailService.sendEmail(addUser, "Welcome to Gamecon", "You are successfully registered!");
             return _mappedUser;       
         }
 

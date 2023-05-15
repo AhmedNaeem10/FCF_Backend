@@ -7,6 +7,7 @@ using FCF.Services.Interfaces;
 using FluentValidation.AspNetCore;
 using FCF.Services.Services;
 using FCF.Models.Validators.ModelValidators.User;
+using FCF.Services.Implementations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +25,8 @@ builder.Services.AddScoped<IVenueService, VenueService>();
 builder.Services.AddTransient<IMatchService, MatchService>();
 builder.Services.AddScoped<IJwtService, JwtService>();
 builder.Services.AddTransient<MainDBContext>();
+builder.Services.AddScoped<IEmailService, EmailService>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

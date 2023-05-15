@@ -307,3 +307,8 @@ C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF_Backend\bin\Debug\net6.0\AutoMa
 C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF_Backend\bin\Debug\net6.0\FluentValidation.dll
 C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF_Backend\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF_Backend\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF_Backend\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF_Backend\bin\Debug\net6.0\MailKit.dll
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF_Backend\bin\Debug\net6.0\MimeKit.dll
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF_Backend\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\ahmednaeem\source\repos\FCF_Backend\FCF_Backend\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
