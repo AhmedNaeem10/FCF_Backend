@@ -39,8 +39,10 @@ namespace FCF.Data.Migrations
                     b.Property<int?>("TeamId2")
                         .HasColumnType("int");
 
+                    b.Property<int?>("TournamentId")
+                        .HasColumnType("int");
+
                     b.Property<int?>("VenueId")
-                        .IsRequired()
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -48,6 +50,8 @@ namespace FCF.Data.Migrations
                     b.HasIndex("TeamId1");
 
                     b.HasIndex("TeamId2");
+
+                    b.HasIndex("TournamentId");
 
                     b.HasIndex("VenueId");
 
@@ -66,9 +70,41 @@ namespace FCF.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("TournamentId")
+                        .HasColumnType("int");
+
                     b.HasKey("TeamId");
 
+                    b.HasIndex("TournamentId");
+
                     b.ToTable("Teams");
+                });
+
+            modelBuilder.Entity("FCF.Entities.Tournament", b =>
+                {
+                    b.Property<int>("TournamentId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TournamentId"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ScheduledAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("TournamentId");
+
+                    b.ToTable("Tournaments");
                 });
 
             modelBuilder.Entity("FCF.Entities.User", b =>
@@ -149,17 +185,33 @@ namespace FCF.Data.Migrations
                         .HasForeignKey("TeamId2")
                         .OnDelete(DeleteBehavior.NoAction);
 
+                    b.HasOne("FCF.Entities.Tournament", "Tournament")
+                        .WithMany()
+                        .HasForeignKey("TournamentId")
+                        .OnDelete(DeleteBehavior.NoAction);
+
                     b.HasOne("FCF.Entities.Venue", "Venue")
                         .WithMany()
                         .HasForeignKey("VenueId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.Navigation("Team1");
 
                     b.Navigation("Team2");
 
+                    b.Navigation("Tournament");
+
                     b.Navigation("Venue");
+                });
+
+            modelBuilder.Entity("FCF.Entities.Team", b =>
+                {
+                    b.HasOne("FCF.Entities.Tournament", "Tournament")
+                        .WithMany()
+                        .HasForeignKey("TournamentId")
+                        .OnDelete(DeleteBehavior.NoAction);
+
+                    b.Navigation("Tournament");
                 });
 
             modelBuilder.Entity("FCF.Entities.User", b =>

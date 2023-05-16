@@ -25,28 +25,13 @@ namespace FCF.Services.Services
         }
         public async Task<Team> AddTeamAsync(TeamDto team)
         {
-            try
+            var newTeam = new Team()
             {
-                if (ValidateTeam(team))
-                {
-                    var newTeam = new Team()
-                    {
-                        Name = team.teamName
-                    };
-                    await dbContext.Teams.AddAsync(newTeam);
-                    await dbContext.SaveChangesAsync();
-                    return newTeam;
-                }
-                else
-                {
-                    return null;
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return null;
-            }
+                Name = team.teamName
+            };
+            await dbContext.Teams.AddAsync(newTeam);
+            await dbContext.SaveChangesAsync();
+            return newTeam;
         }
 
         public async Task<List<Team>> GetAllTeamsAsync()
@@ -57,6 +42,14 @@ namespace FCF.Services.Services
         public async Task<Team> GetByIdAsync(int id)
         {
             return await dbContext.Teams.SingleOrDefaultAsync(x => x.TeamId == id);
+        }
+
+        public async Task<Team> RegisterTeamInTournament(int teamId, int tourId)
+        {
+            var team = await dbContext.Teams.SingleOrDefaultAsync(x => x.TeamId == teamId);
+            team.TournamentId = tourId;
+            await dbContext.SaveChangesAsync();
+            return team;
         }
     }
 }

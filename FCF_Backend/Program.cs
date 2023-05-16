@@ -20,9 +20,10 @@ builder.Services.AddDbContext<MainDBContext>(option =>
 option.UseSqlServer(builder.Configuration.GetConnectionString("Conn") ?? throw new InvalidOperationException("Connection string 'MainDbContext' not found."), b => b.MigrationsAssembly("FCF.Data")));
 builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 builder.Services.AddTransient<IUserService, UserService>();
-builder.Services.AddScoped<ITeamService, TeamService>();
+builder.Services.AddTransient<ITeamService, TeamService>();
 builder.Services.AddScoped<IVenueService, VenueService>();
 builder.Services.AddTransient<IMatchService, MatchService>();
+builder.Services.AddTransient<ITournamentService, TournamentService>();
 builder.Services.AddScoped<IJwtService, JwtService>();
 builder.Services.AddTransient<MainDBContext>();
 builder.Services.AddScoped<IEmailService, EmailService>();

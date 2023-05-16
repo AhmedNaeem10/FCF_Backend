@@ -19,7 +19,7 @@ namespace WebAPI.Controllers
         }
 
 
-        [Authorize(Role="admin")]
+       // [Authorize(Role="admin")]
         [HttpGet]
         public async Task<IActionResult> GetUsersAsync()
         {
@@ -28,7 +28,7 @@ namespace WebAPI.Controllers
             return Ok(response);
         }
 
-        [Authorize(Role = "admin,player,captain")]
+       // [Authorize(Role = "admin,player,captain")]
         [HttpGet]
         [Route("Paginated/{pageNum:int}/{chunkSize:int}")]
         public async Task<IActionResult> GetPaginatedUsers([FromRoute] int pageNum, int chunkSize)
@@ -37,7 +37,7 @@ namespace WebAPI.Controllers
             return Ok(users);
         }
 
-        [Authorize(Role="admin,player,captain")]
+       // [Authorize(Role="admin,player,captain")]
         [HttpGet]
         [Route("{id:int}")]
         public async Task<ActionResult<User>> GetUserAsync([FromRoute] int id)
@@ -56,7 +56,7 @@ namespace WebAPI.Controllers
             return Ok(response);
         }
 
-        [Authorize(Role="admin,player,captain")]
+       // [Authorize(Role="admin,player,captain")]
         [HttpPut]
         [Route("{id:int}")]
         public async Task<IActionResult> UpdateUserAsync([FromRoute] int id, [FromBody] UserDto updatedUser)
@@ -67,7 +67,7 @@ namespace WebAPI.Controllers
            
         }
 
-        [Authorize(Role="player,admin,captain")]
+       // [Authorize(Role="player,admin,captain")]
         [HttpPut]
         [Route("ChangePassword")]
         public async Task<IActionResult> UpdatePasswordAsync([FromBody] UpdatePasswordDto info )
@@ -78,7 +78,7 @@ namespace WebAPI.Controllers
             
         }
 
-        [Authorize(Role="admin,player,captain")]
+        //[Authorize(Role="admin,player,captain")]
         [HttpDelete]
         [Route("{id:int}")]
         public async Task<IActionResult> DeleteUserAsync([FromRoute] int id)
@@ -88,7 +88,7 @@ namespace WebAPI.Controllers
             return Ok(response);
         }
 
-        [Authorize(Role="admin,player,captain")]
+       // [Authorize(Role="admin,player,captain")]
         [HttpPut]
         [Route("RegisterInTeam/{uid}/{tid}")]
         public async Task<IActionResult> RegitserUserInTeam([FromRoute] int uid, int tid)

@@ -2,6 +2,9 @@
 using FCF.Services;
 using FCF.Services.Interfaces;
 using FCF.Models.Requests.MatchDtos;
+using FCF.Entities;
+using FCF.Models.Responses.ResponseDto;
+using FCF.Services.Implementations;
 
 namespace WebAPI.Controllers
 {
@@ -18,7 +21,9 @@ namespace WebAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetMatches()
         {
-            return Ok(await matchService.GetAllMatchesAsync());
+            var matches = await matchService.GetAllMatchesAsync();
+            GenericResponse<List<Match>> response = new GenericResponse<List<Match>>(matches);
+            return Ok(response);
         }
 
         [HttpGet]
@@ -26,11 +31,8 @@ namespace WebAPI.Controllers
         public async Task<IActionResult> GetMatch(int id)
         {
             var match = await matchService.GetByIdAsync(id);
-            if (match == null)
-            {
-                return NotFound();
-            }
-            return Ok(match);
+            GenericResponse<Match> response = new GenericResponse<Match>(match);
+            return Ok(response);
         }
 
       //  [Authorize(Role="admin")]
@@ -38,14 +40,8 @@ namespace WebAPI.Controllers
         public async Task<IActionResult> CreateMatchAsync([FromBody] MatchDto match)
         {
             var match_ = await matchService.CreateMatchAsync(match);
-            if (match_ != null)
-            {
-                return Ok(match_);
-            }
-            else
-            {
-                return BadRequest(new { message = "Failed to create the match!" });
-            }
+            GenericResponse<Match> response = new GenericResponse<Match>(match_);
+            return Ok(response);
         }
     }
 }

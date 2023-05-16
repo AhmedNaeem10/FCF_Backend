@@ -16,23 +16,17 @@ namespace FCF.Services.Services
         }
         public async Task<Match> CreateMatchAsync(MatchDto match)
         {
-            try
+            var match_ = new Match()
             {
-                var match_ = new Match()
-                {
-                    TeamId1 = match.TeamId1,
-                    TeamId2 = match.TeamId2,
-                    VenueId = match.VenueId,
-                    Date_time = new DateTime()
-                };
-                await dbContext.Matches.AddAsync(match_);
-                await dbContext.SaveChangesAsync();
-                return match_;
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
+                TeamId1 = match.TeamId1,
+                TeamId2 = match.TeamId2,
+                VenueId = match.VenueId,
+                TournamentId = match.TournamentId,
+                Date_time = DateTime.Now
+            };
+            await dbContext.Matches.AddAsync(match_);
+            await dbContext.SaveChangesAsync();
+            return match_;
         }
 
         public async Task<List<Match>> GetAllMatchesAsync()

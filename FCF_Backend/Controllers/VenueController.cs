@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using FCF.Services.Interfaces;
 using FCF.Models.Requests.VenueDtos;
+using FCF.Models.Responses.ResponseDto;
+using System;
 
 namespace FCF.Api.Controllers
 {
@@ -17,26 +19,27 @@ namespace FCF.Api.Controllers
 
         [HttpGet]
         [Route("{id:int}")]
-        public async Task<Venue> GetVenueByIdAsync(int id)
+        public async Task<IActionResult> GetVenueByIdAsync(int id)
         {
-            return await venueService.GetByIdAsync(id);
+            var venue = await venueService.GetByIdAsync(id);
+            GenericResponse<Venue> response = new GenericResponse<Venue>(venue);
+            return Ok(response);
         }
 
         [HttpGet]
-        public async Task<List<Venue>> GetVenuesAsync()
+        public async Task<IActionResult> GetAllVenuesAsync()
         {
-            return await venueService.GetAllAsync();
+            var venues = await venueService.GetAllAsync();
+            GenericResponse<List<Venue>> response = new GenericResponse<List<Venue>>(venues);
+            return Ok(response);
         }
 
         [HttpPost]
         public async Task<IActionResult> AddVenueAsync([FromBody] VenueDto newVenue)
         {
             var venue = await venueService.AddAsync(newVenue);
-            if (venue == null)
-            {
-                return BadRequest(new { message = "Failed to add venue!" });
-            }
-            return Ok(venue);
+            GenericResponse<Venue> response = new GenericResponse<Venue>(venue);
+            return Ok(response);
         }
 
 
@@ -45,22 +48,17 @@ namespace FCF.Api.Controllers
         public async Task<IActionResult> UpdateVenueAsync([FromRoute]int id, [FromBody] VenueDto updatedVenue)
         {
             var venue = await venueService.UpdateAsync(id, updatedVenue);
-            if (venue == null)
-            {
-                return BadRequest(new { message = "Failed to update venue!" });
-            }
-            return Ok(venue);
+            GenericResponse<Venue> response = new GenericResponse<Venue>(venue);
+            return Ok(response);
         }
 
         [HttpDelete]
         [Route("{id:int}")]
         public async Task<IActionResult> DeleteVenueAsync(int id)
         {
-            if (await venueService.DeleteAsync(id))
-            {
-                return Ok();
-            }
-            return BadRequest(new {message = "Failed to delete venue!"});
+            var result = await venueService.DeleteAsync(id);
+            GenericResponse<bool> response = new GenericResponse<bool>(result);
+            return Ok(response);
         }
     }
 }

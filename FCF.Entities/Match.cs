@@ -15,19 +15,25 @@ namespace FCF.Entities
         public int? TeamId1 { get; set; }
 
         [ForeignKey("TeamId1")]
-        public Team Team1 { get; set; }
+        public Team? Team1 { get; set; }
 
         public int? TeamId2 { get; set; }
 
         [ForeignKey("TeamId2")]
         [DeleteBehavior(DeleteBehavior.NoAction)]
-        public Team Team2 { get; set; }
+        public Team? Team2 { get; set; }
 
         public int? VenueId { get; set; }
 
         [ForeignKey("VenueId")]
         [DeleteBehavior(DeleteBehavior.NoAction)]
-        public Venue Venue { get; set; }
+        public Venue? Venue { get; set; }
+
+        public int? TournamentId { get; set; }
+
+        [ForeignKey("TournamentId")]
+        [DeleteBehavior(DeleteBehavior.NoAction)]
+        public Tournament? Tournament { get; set; }
 
     }
 }
